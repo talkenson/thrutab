@@ -1,0 +1,39 @@
+{
+  "name": "thrutab",
+  "version": "0.0.1",
+  "description": "Simple data exchange between tabs with the same origin",
+  "main": "./dist/thrutab.cjs.js",
+  "module": "./dist/thrutab.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/thrutab.es.js",
+      "require": "./dist/thrutab.cjs.js"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": "github:talkenson/thrutab",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "tab",
+    "service-worker",
+    "exchange"
+  ],
+  "author": "Vitaly Shatalov <talkenson@talkiiing.ru> (https://talkenson.ru)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^16.11.3",
+    "@types/react": "^16.8.0",
+    "prettier": "^2.4.1",
+    "typescript": "^4.4.4",
+    "vite": "^2.6.10",
+    "vite-plugin-dts": "^0.9.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0, ^17.0.0"
+  }
+}
