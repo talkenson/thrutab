@@ -10,7 +10,7 @@ export const isServiceMessage = (
   broadcast: TunnelData<any>['broadcast'],
 ): broadcast is ServiceMessage => {
   return (
-    Object(broadcast).hasOwnProperty('type') &&
+    Object.prototype.hasOwnProperty.call(broadcast, 'type') &&
     ServiceMessageTypes.includes(broadcast.type)
   )
 }
@@ -18,11 +18,11 @@ export const isServiceMessage = (
 export const isRequestBasedMessage = (
   broadcast: TunnelData<any>['broadcast'],
 ): broadcast is RequestBasedMessage => {
-  return Object(broadcast).hasOwnProperty('requestId')
+  return Object.prototype.hasOwnProperty.call(broadcast, 'requestId')
 }
 
 export const isSyncBasedMessage = (
   broadcast: TunnelData<any>['broadcast'],
 ): broadcast is SyncBasedMessage => {
-  return Object(broadcast).hasOwnProperty('key')
+  return Object.prototype.hasOwnProperty.call(broadcast, 'key')
 }

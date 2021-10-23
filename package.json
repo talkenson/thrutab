@@ -1,6 +1,6 @@
 {
   "name": "thrutab",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple data exchange between tabs with the same origin",
   "main": "./dist/thrutab.cjs.js",
   "module": "./dist/thrutab.es.js",
@@ -21,7 +21,10 @@
   "keywords": [
     "tab",
     "service-worker",
-    "exchange"
+    "exchange",
+    "message",
+    "cache",
+    "state"
   ],
   "author": "Vitaly Shatalov <talkenson@talkiiing.ru> (https://talkenson.ru)",
   "license": "ISC",
